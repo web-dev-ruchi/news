@@ -78,7 +78,7 @@ switch ($page) {
                 <div class=" col-md-offset-4 col-md-4">
                     <?php
                     include "config.php";
-                    $qu = "SELECT * FROM setting";
+                    $qu = "SELECT * FROM settings";
                     $re = mysqli_query($conn, $qu) or die("Query Failed!");
                     if (mysqli_num_rows($re) > 0) {
                         while ($ro = mysqli_fetch_assoc($re)) {

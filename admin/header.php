@@ -52,14 +52,15 @@ if(!isset($_SESSION["username"])){
                             </li>
                             <?php
                             if($_SESSION['user_role']=='1'){
-
-                            
                             ?>
                             <li>
                                 <a href="category.php">Category</a>
                             </li>
                             <li>
                                 <a href="users.php">Users</a>
+                            </li>
+                            <li>
+                                <a href="setting.php">Setting</a>
                             </li>
                             <?php
                             }

@@ -41,15 +41,14 @@
                       WHERE post.author={$_SESSION['user_id']}
                        ORDER BY post.post_id DESC ";
                         }
-
+  $sr = 1;
+  $sr = $offset + 1;
                         $res = mysqli_query($conn, $query) or die("Query Failed!");
                         if (mysqli_num_rows($res) > 0) {
                             while ($row = mysqli_fetch_assoc($res)) {
-
-
                         ?>
                                 <tr>
-                                    <td class='id'><?php echo $row['post_id']; ?></td>
+                                    <td class='id'><?php echo $sr++ ?></td>
                                     <td><?php echo $row['title']; ?></td>
                                     <td><?php echo $row['category_name']; ?></td>
                                     <td><?php echo $row['post_date']; ?></td>

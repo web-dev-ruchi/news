@@ -37,10 +37,12 @@ if($_SESSION['user_role']=='0'){
                         </thead>
                         <tbody>
                             <?php
+                            $sr =1;
+                            $sr = $offset + 1;
                             while ($row = mysqli_fetch_assoc($result)) {
                             ?>
                                 <tr>
-                                    <td class='id'><?php echo $row['user_id'] ?></td>
+                                    <td class='id'><?php echo $sr++?></td>
                                     <td><?php echo $row['first_name'] . " " . $row['last_name'] ?></td>
                                     <td><?php echo $row['username'] ?></td>
                                     <td><?php

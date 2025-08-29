@@ -29,7 +29,7 @@ $errors[]="File size must be 2mb or lower.";
     $name=mysqli_real_escape_string($conn, $_POST['webname']);
     $logo =mysqli_real_escape_string($conn, $file_name);
     $desc=mysqli_real_escape_string($conn,$_POST['webdesc']);
-    $query="UPDATE setting SET websitename='{$name}',logo='{$logo}',description='{$desc}'";
+    $query="UPDATE settings SET websitename='{$name}',logo='{$logo}',footerdesc='{$desc}'";
 
     $res=mysqli_query($conn,$query) or die ("Query failed!");
     if($res){
